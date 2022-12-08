@@ -137,7 +137,7 @@ export const card = {
 
 export const footerBox = {
   py: 1,
-  backgroundColor: "#3284be",
+  backgroundColor: "#ffffff",
   color: "#ffffff",
 };
 

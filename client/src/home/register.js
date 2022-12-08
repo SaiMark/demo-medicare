@@ -1,110 +1,73 @@
 import * as React from "react";
 import {
-  Button,
-  Grid,
-  Card,
-  CardActionArea,
-  CardMedia,
-  CardContent,
-  Typography,
+  Row,
+  Col,
+  Container,
 } from "@mui/material";
+import './home.css';
 import { boldRaleway, button, cardMedia, raleway } from "./styles";
-
+import HomeIMG  from './home-img.svg';
 const Register = () => {
   return (
-    <Grid container spacing={4} id="register">
-      {/* REGISTER AS DOCTOR */}
-      <Grid item xs={12} md={6}>
-        <CardActionArea component="a" href="#">
-          <Card sx={{ display: "flex" }}>
-            <CardContent sx={{ flex: 1, fontFamily: "Raleway" }}>
-              <Typography component="h1" variant="h4" sx={boldRaleway}>
-                Register as a Doctor
-              </Typography>
-              <Typography variant="h5" paragraph sx={raleway}>
-                Sign Up to provide consultations to patients
-              </Typography>
-              <Button sx={button} href="/doctor_signup">
-                Sign Up
-              </Button>
+    <div>
+    <section class="home" id="home">
 
-              <Button sx={button} href="/doctor_signin">
-                Sign In
-              </Button>
-            </CardContent>
+    <div class="image">
+      <img src = {HomeIMG}/> {/* <img src="image/home-img.svg" alt=""> */}
+    </div>
 
-            {/* Image */}
-            <CardMedia
-              component="img"
-              sx={cardMedia}
-              image="images/doctor.jpg"
-              alt="Doctor"
-            />
-          </Card>
-        </CardActionArea>
-      </Grid>
+    <div class="content">
+        <h3>Stay with ThincHealth </h3>
+        <p>We hope that the power of the Internet will bring patients and doctors closer together and make healthcare more accessible!</p>
+        {/* <a href="#" class="btn"> contact us <span class="fas fa-chevron-right"></span> </a> */}
+        {/* <Container> */}
+         
+              <a href="/doctor_signup" className="btn">
+                Sign Up Doctor
+              </a>
 
-      {/* REGISTER AS PATIENT */}
-      <Grid item xs={12} md={6}>
-        <CardActionArea component="a" href="#">
-          <Card sx={{ display: "flex" }}>
-            <CardContent sx={{ flex: 1 }}>
-              <Typography component="h1" variant="h4" sx={boldRaleway}>
-                Register as a Patient
-              </Typography>
-              <Typography variant="h5" paragraph sx={raleway}>
-                Sign Up to book appointments with doctors
-              </Typography>
-              <Button sx={button} href="/patient_signup">
-                Sign Up
-              </Button>
+              <a href="/doctor_signin" className="btn">
+                Sign In Doctor
+              </a>
+   
+              <a href="/patient_signup" className="btn">
+                Sign Up as Patient 
+              </a>
 
-              <Button sx={button} href="/patient_signin">
-                Sign In
-              </Button>
-            </CardContent>
+              <a href="/patient_signin" className="btn">
+                Sign In Patient
+              </a>
 
-            {/* Image */}
-            <CardMedia
-              component="img"
-              sx={cardMedia}
-              image="images/patient.jpg"
-              alt="Patient"
-            />
-          </Card>
-        </CardActionArea>
-      </Grid>
+              <a href="/admin_signin" className="btn">
+                Sign In Admin
+              </a>
+{/*           
+        </Container> */}
+    </div>
 
-      {/* ADMIN LOGIN */}
-      <Grid item xs={12}>
-        <CardActionArea component="a" href="#">
-          <Card sx={{ display: "flex" }}>
-            <CardContent sx={{ flex: 1 }}>
-              <Typography component="h1" variant="h4" sx={boldRaleway}>
-                Sign in as an Admin
-              </Typography>
-              <Typography variant="h5" paragraph sx={raleway}>
-                Only verified admins of Medicare can login using the email ID
-                provided to them
-              </Typography>
-
-              <Button sx={button} href="/admin_signin">
-                Sign In
-              </Button>
-            </CardContent>
-
-            {/* Image */}
-            <CardMedia
-              component="img"
-              sx={cardMedia}
-              image="images/admin.jpg"
-              alt="Admin"
-            />
-          </Card>
-        </CardActionArea>
-      </Grid>
-    </Grid>
+    </section>
+    </div>
   );
 };
 
 export default Register;
+
+{/* <Button sx={button} href="/doctor_signup">
+                Sign Up Doctor
+              </Button>
+
+              <Button sx={button} href="/doctor_signin">
+                Sign In Doctor
+              </Button>
+
+              <Button sx={button} href="/patient_signup">
+                Sign Up as Patient 
+              </Button>
+
+              <Button sx={button} href="/patient_signin">
+                Sign In Patient
+              </Button>
+
+              <Button sx={button} href="/admin_signin">
+                Sign In Admin
+              </Button> */}

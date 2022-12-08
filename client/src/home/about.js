@@ -1,4 +1,5 @@
 import * as React from "react";
+import './home.css';
 import { Box, Grid, Paper, Typography } from "@mui/material";
 import {
   box,
@@ -8,11 +9,31 @@ import {
   raleway,
   headerBox,
 } from "./styles";
-
+import AboutImg  from './about-img.svg';
 const About = () => {
   return (
     <div id="about">
-      <Typography
+      <section class="about" id="about">
+
+      <h1 class="heading"> <span>about</span> us </h1>
+
+      <div class="row">
+
+          <div class="image">
+            <img src = {AboutImg}/>{/* <img src="image/about-img.svg" alt=""> */}
+          </div>
+
+          <div class="content">
+              <h3>we take care of your healthy life</h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure ducimus, quod ex cupiditate ullam in assumenda maiores et culpa odit tempora ipsam qui, quisquam quis facere iste fuga, minus nesciunt.</p>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus vero ipsam laborum porro voluptates voluptatibus a nihil temporibus deserunt vel?</p>
+              <a href="#" class="btn"> learn more </a>
+          </div>
+
+      </div>
+
+      </section>
+      {/* <Typography
         component="h1"
         variant="h5"
         color="inherit"
@@ -29,19 +50,19 @@ const About = () => {
           <b> Let's together bring a change in the medical industry!</b>
         </i>
       </Typography>
-      <Paper sx={aboutPaper}>
+      <Paper sx={aboutPaper}> */}
         {/* Increase the priority of the hero background image */}
-        {
+        {/* {
           <img
             style={{ display: "none" }}
             src={process.env.PUBLIC_URL + "images/doctors.jpg"}
             alt="Doctors"
           />
         }
-        <Box sx={box} />
+        <Box sx={box} /> */}
 
         {/* Text above image */}
-        <Grid container>
+        {/* <Grid container>
           <Grid item md={6}>
             <Box sx={headerBox}>
               <Typography
@@ -59,7 +80,7 @@ const About = () => {
             </Box>
           </Grid>
         </Grid>
-      </Paper>
+      </Paper> */}
     </div>
   );
 };

@@ -19,28 +19,29 @@ const theme = createTheme();
 
 const Home = () => {
   return (
-    <ThemeProvider theme={theme}>
+    <div>
       <CssBaseline />
-      <Container maxWidth="lg" sx={{ backgroundColor: "#d7e8f4" }}>
+      {/* maxWidth="lg" sx={{ backgroundColor: "#d7e8f4" }} */}
+      <div maxWidth="100%" sx={{ backgroundColor: "#d7e8f4" }}>
         {/* NAVBAR COMPONENT - links to various sections*/}
         <Navbar sections={sections} />
 
         <main>
           {/* HEADER COMPONENT - image with tagline*/}
-          <Header />
+          {/* <Header /> */}
           {/* REGISTER COMPONENT - signup/signin for doctor/patient */}
           <Register />
           <br />
           <br />
           {/* ABOUT COMPONENT - about doctors */}
-          <About />
+          {/* <About /> */}
           {/* TESTIMONIALS COMPONENT - patient testimonials */}
-          <Testimonials />
+          {/* <Testimonials /> */}
           {/* FOOTER COMPONENT - contacts */}
           <Footer />
         </main>
-      </Container>
-    </ThemeProvider>
+      </div>
+    </div>
   );
 };
 

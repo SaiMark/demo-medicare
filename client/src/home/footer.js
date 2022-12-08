@@ -8,19 +8,9 @@ import {
   TextField,
   Button,
 } from "@mui/material";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import EmailIcon from "@mui/icons-material/Email";
-import PhoneIcon from "@mui/icons-material/Phone";
-import SendIcon from "@mui/icons-material/Send";
-import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import './home.css';
 import {
-  footerBox,
-  footerTitle,
-  iconButton,
   raleway,
-  sendButton,
 } from "./styles";
 
 const Copyright = () => {
@@ -40,98 +30,38 @@ const Footer = () => {
   };
 
   return (
-    <Box component="footer" sx={footerBox} id="contact">
-      {/* COPYRIGHT */}
-      <Container maxWidth="lg">
-        <Typography variant="h5" align="center" gutterBottom sx={raleway}>
-          Medicare
-        </Typography>
-        <Copyright />
-        <Typography variant="subtitle1" align="center" sx={raleway}>
-          Developed by Sneha Singh
-        </Typography>
+      <section class="footer">
 
-        <Grid container>
-          {/* CONNECT WITH US */}
-          <Grid item xs={12} md={4}>
-            <Typography variant="h6" gutterBottom sx={footerTitle}>
-              Connect with us
-            </Typography>
+      <div class="box-container">
 
-            <IconButton href="https://github.com/Sneha0607" sx={iconButton}>
-              <GitHubIcon />
-            </IconButton>
+          <div class="box">
+              <h3>our services</h3>
+              <a href="#"> <i class="fas fa-chevron-right"></i> ThincCare </a>
+              <a href="#"> <i class="fas fa-chevron-right"></i> ThincHealth </a>
+              <a href="#"> <i class="fas fa-chevron-right"></i> ThincApp </a>
+              <a href="#"> <i class="fas fa-chevron-right"></i> Nutrition </a>
+          </div>
 
-            <IconButton href="https://twitter.com/sneha_0607" sx={iconButton}>
-              <TwitterIcon />
-            </IconButton>
+          <div class="box">
+              <h3>contact info</h3>
+              <a href="#"> <i class="fas fa-phone"></i> +123 456 7890 </a>
+              <a href="#"> <i class="fas fa-envelope"></i> thinchealth@gmail.com </a>
+              <a href="#"> <i class="fas fa-map-marker-alt"></i> contact@thinchealth.org </a>
+          </div>
 
-            <IconButton href="#" sx={iconButton}>
-              <FacebookIcon />
-            </IconButton>
+          <div class="box">
+              <h3>follow us</h3>
+              <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+              <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+              <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+              <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+          </div>
 
-            <Typography variant="h6" gutterBottom sx={footerTitle}>
-              Go back to top
-            </Typography>
-            <IconButton href="#" sx={iconButton}>
-              <ArrowUpwardIcon />
-            </IconButton>
-          </Grid>
+      </div>
 
-          {/* CONTACTS */}
-          <Grid xs={12} md={4}>
-            <Typography variant="h6" gutterBottom sx={footerTitle}>
-              Contact us
-            </Typography>
-            <IconButton href="#" sx={iconButton}>
-              <EmailIcon />
-              <Typography variant="body2">
-                {" "}
-                sneha.20198023@mnnit.ac.in{" "}
-              </Typography>
-            </IconButton>
-            <IconButton href="#" sx={iconButton}>
-              <PhoneIcon />
-              <Typography variant="body2"> +91-9999 999 999 </Typography>
-            </IconButton>
-          </Grid>
+      <div class="credit"></div>
 
-          {/* NEWSLETTER SUBSCRIPTION */}
-          <Grid>
-            <Typography variant="h6" gutterBottom sx={footerTitle}>
-              Subscribe to our newsletter
-            </Typography>
-            <form onSubmit={handleSubmit}>
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                id="email"
-                label="Email"
-                name="email"
-                autoComplete="email"
-                autoFocus
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                size="small"
-                sx={{
-                  backgroundColor: "#ffffff",
-                  fontFamily: "Raleway",
-                }}
-              />
-              <Button
-                type="submit"
-                variant="contained"
-                startIcon={<SendIcon />}
-                sx={sendButton}
-              >
-                Send
-              </Button>
-            </form>
-          </Grid>
-        </Grid>
-      </Container>
-    </Box>
+  </section>
   );
 };
 
